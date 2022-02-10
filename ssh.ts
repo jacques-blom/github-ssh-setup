@@ -21,7 +21,6 @@ const logStep = async (message: string) => {
     console.log(prefix + " " + message)
 }
 
-// Todo: Check for existing keys and ask if want to use that
 const run = async () => {
     const { email } = await inquirer.prompt({
         name: "email",
