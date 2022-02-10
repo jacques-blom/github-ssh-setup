@@ -1,8 +1,8 @@
 name: Publish to NPM
 
-on:
-  release:
-    types: [created]
+on: push
+  # release:
+  #   types: [created]
 
 jobs:
   build:
@@ -14,6 +14,7 @@ jobs:
           node-version: 16
       - run: yarn --frozen-lockfile
       - run: yarn build
+      - run: cat ./build/ssh.js
 
   publish-npm:
     needs: build
@@ -24,7 +25,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: yarn --frozen-lockfile
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
