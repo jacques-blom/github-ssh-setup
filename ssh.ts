@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import clipboard from "clipboardy"
 import * as EmailValidator from "email-validator"
 import { execa } from "execa"

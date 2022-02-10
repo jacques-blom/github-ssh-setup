@@ -1,6 +1,6 @@
 {
     "name": "ghss",
-    "version": "0.0.0",
+    "version": "1.0.1",
     "description": "A script to set up SSH keys for GitHub",
     "author": "Jacques Blom @jacques-blom",
     "license": "MIT",
